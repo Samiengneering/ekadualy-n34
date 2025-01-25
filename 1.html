@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open and Close Animation</title>
+    <style>
+  body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            padding: 20px;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        .header {
+            background-color: #007b7f;
+            color: #ffffff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .nav-list {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .nav-list li {
+            display: inline;
+        }
+        .nav-list a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .nav-list a:hover {
+            text-decoration: underline;
+        }
+        .word {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #00ad9f;
+            opacity: 0;
+            transition: opacity 1s;
+        }
+        .word.show {
+            opacity: 1;
+        }
+    </style>
+</head>
+<progress>waite secondes.... </progress>
+
+<body>
+    <div class="header">
+        <ul class="nav-list">
+            <li><a href="4.html">Home</a></li>
+            <li><a href="7.html">ايكادولي</a></li>
+            <li><a href="6.html">best friend</a></li>
+            <li><a href="1.html">خروج</a></li>
+            <li><a href="2.html">البداية</a></li>
+        </ul>
+    </div> 
+    <h1>Waite....</h1>
+    <div class="word" id="word">open</div>
+السبت25/02/2025 ......sam.
+    <script>
+        const wordElement = document.getElementById('word');
+        let isOpen = true;
+
+        setInterval(() => {
+            wordElement.classList.remove('show');
+            setTimeout(() => {
+                wordElement.textContent = isOpen ? 'Goodbye' : 'And See You soon Inshallah ';
+                wordElement.classList.add('show');
+                isOpen = !isOpen;
+            }, 1000);
+        }, 3000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مرحبا فيك</title>
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            padding: 20px;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        .header {
+            background-color: #007b7f;
+            color: #ffffff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .nav-list {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .nav-list li {
+            display: inline;
+        }
+        .nav-list a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .nav-list a:hover {
+            text-decoration: underline;
+        }
+        .box {
+            width: 500px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid #00ad9f;
+            border-radius: 8px;
+            background-color: #ffffff;
+        }
+        .word {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #00ad9f;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+        .word.show {
+            opacity: 1;
+        }
+    </style>
+</head> 
+
+ <h1> اضغط هنا من  اجلك</h1> 
+
+<body>
+    <div class="header">
+        <ul class="nav-list">
+            <li><a href="4.html">Home</a></li>
+            <li><a href="7.html">ايكادولي</a></li>
+            <li><a href="6.html">best friend</a></li>
+            <li><a href="1.html">خروج</a></li>
+            <li><a href="2.html">البداية</a></li>
+        </ul>
+    </div> 
+    <a href="4.html" class="box">
+        <div class="word" id="word">open</div>
+    </div>
+
+    <script>
+        const wordElement = document.getElementById('word');
+        let isOpen = true;
+
+        setInterval(() => {
+            wordElement.classList.remove('show');
+            setTimeout(() => {
+                wordElement.textContent = isOpen ? 'Asslame Alykum ' : 'Welcome My Freind (A) ';
+                wordElement.classList.add('show');
+                isOpen = !isOpen;
+            }, 1000);
+        }, 3000);
+    </script>
+</body>
+</html>
+<style>
+    @keyframes pulse {
+        0%, 100% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.2);
+        }
+    }
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #fafafa;
+        margin: 0;
+    }
+    .logo {
+        font-family: Arial, sans-serif;
+        font-size: 3rem;
+        font-weight: bold;
+        color: #000cad;
+        position: relative;
+    }
+    .logo::before, .logo::after {
+        content: '';
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        background-color: #1345fc;
+        border-radius: 50%;
+        animation: pulse 1.5s infinite;
+    }
+    .logo::before {
+        top: -20px;
+        left: -20px; animation: 
+        ani 1s linear infinite;
+    }
+    .logo::after {
+        bottom: -20px;
+        right: -20px;
+    }
+    .logo span {
+        color: #333333;
+        animation: ani 1s linear infinite; }
+        .spiner {
+        width: 50px;
+        height: 50px;
+        border: 5px solid #0d61e8f7;
+        border-top: 5px solid #636363;
+        border-radius: 167%;
+        animation: ani 1s linear infinite;
+    }
+
+    @keyframes ani {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+        img{ width: 50px;
+        height: 50px;
+        border: 5px solid #0906dbf7;
+        border-top: 5px solid #2dfa6e;
+        border-radius: 50%;
+        animation: ani 7s linear infinite;}
+
+
+        
+</style>
+</head>
+<body>
+<div class="logo">
+    <span>  ا</span>ه<span>لا</span> فيك
+</div>
+
+</body>
+</html>
+<body>
+<img src="image/2025 Academic Way logo.png" alt="">
+
+</body>
+
